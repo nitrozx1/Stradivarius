@@ -1,5 +1,7 @@
 # Stradivarius
 Custom Silly Tavern Presets
+
+
 The most important thing to know is this: **Most of the toggles and modules in this preset are completely unnecessary for a great experience.** They are powerful tools for when you need them, but they are not required.
 
 #### **Quick Start Guide: How to Use This in 30 Seconds**
