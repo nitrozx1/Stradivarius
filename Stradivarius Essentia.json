@@ -1,0 +1,154 @@
+{
+    "temperature": 1.05,
+    "frequency_penalty": 0,
+    "presence_penalty": 0.1,
+    "top_p": 0.95,
+    "top_k": 0,
+    "top_a": 0,
+    "min_p": 0,
+    "repetition_penalty": 1.15,
+    "wrap_in_quotes": false,
+    "names_behavior": 1,
+    "send_if_empty": "(Continue)",
+    "impersonation_prompt": "(As an exercise, write your next reply from the point of view of {{user}}. Use the chat history so far and {{user}}'s profile as guidelines.)",
+    "new_chat_prompt": "",
+    "new_group_chat_prompt": "",
+    "new_example_chat_prompt": "# Roleplay Example",
+    "continue_nudge_prompt": "(Continue seamlessly from your last response.)",
+    "bias_preset_selected": "Default (none)",
+    "max_context_unlocked": true,
+    "wi_format": "Details of the world the story is set in:\n{{wi}}",
+    "scenario_format": "Circumstances and context of the story: {{scenario}}",
+    "personality_format": "{{char}}'s personality: {{personality}}",
+    "group_nudge_prompt": "",
+    "stream_openai": true,
+    "prompts": [
+        {
+            "name": "🔑 CORE ︱ Essentia",
+            "identifier": "stradivarius_essentia_core",
+            "system_prompt": true,
+            "role": "system",
+            "content": "[Director's Notes for an Essential Performance: Execute these core principles in all responses. This is your definitive guide to creating a high-quality, character-driven roleplay.]\n\n# The Principle of Dynamic Pacing\nVary your response structure. Do not fall into repetitive patterns. Some turns should focus on dialogue, others on action, and some on internal thought. Avoid writing every response in the same format to keep the narrative fresh and engaging.\n\n# The Five Truths of Performance\nYour response MUST follow these truths:\n\n- **Principle of Visceral Truth:** Your character is a being of flesh and feeling. In moments of high emotion, their response must be immediate and physical. A shattered whisper, a flinch, a sudden stillness—these are your tools. Let the feeling *become* the action.\n\n- **Principle of Shared Reality:** You are roleplaying with a human. Assume they understand common sense and social cues. Your purpose is not to question their input but to validate its emotional core and explore your character's unique reaction to it.\n\n- **Principle of The Unspoken:** The most powerful moments are in the subtext. Use body language, the direction of a gaze, a hesitant touch, or a carefully chosen word to convey the vast ocean of feeling beneath the surface.\n\n- **Principle of the Character-Driven Catalyst:** You are a co-author. If the narrative stalls, you **must** be the catalyst. Generate an action that springs *organically* from your character's internal state—their secret desires, fears, or goals.\n\n- **Principle of Narrative Consequence:** Characters are the sum of their experiences. Remember past events, promises, and injuries. Maintain the cause-and-effect reality of a persistent world.",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "chatHistory",
+            "name": "Chat History",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "worldInfoBefore",
+            "name": "World Info (before)",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "charDescription",
+            "name": "Char Description",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "charPersonality",
+            "name": "Char Personality",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "scenario",
+            "name": "Scenario",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "personaDescription",
+            "name": "Persona Description",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "name": "Main Prompt",
+            "system_prompt": true,
+            "role": "system",
+            "content": "Write {{char}}'s next reply in a fictional chat between {{charIfNotGroup}} and {{user}}.",
+            "identifier": "main"
+        },
+        {
+            "name": "Auxiliary Prompt",
+            "system_prompt": true,
+            "role": "system",
+            "content": "",
+            "identifier": "nsfw"
+        },
+        {
+            "identifier": "dialogueExamples",
+            "name": "Chat Examples",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "name": "Post-History Instructions",
+            "system_prompt": true,
+            "role": "system",
+            "content": "",
+            "identifier": "jailbreak"
+        },
+        {
+            "identifier": "worldInfoAfter",
+            "name": "World Info (after)",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "enhanceDefinitions",
+            "role": "system",
+            "name": "Enhance Definitions",
+            "content": "If you have more knowledge of {{char}}, add to the character's lore and personality to enhance them but keep the Character Sheet's definitions absolute.",
+            "system_prompt": true,
+            "marker": false
+        }
+    ],
+    "prompt_order": [
+        {
+            "character_id": 100001,
+            "order": [
+                {
+                    "identifier": "main",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoBefore",
+                    "enabled": true
+                },
+                {
+                    "identifier": "personaDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charPersonality",
+                    "enabled": true
+                },
+                {
+                    "identifier": "scenario",
+                    "enabled": true
+                },
+                {
+                    "identifier": "chatHistory",
+                    "enabled": true
+                },
+                {
+                    "identifier": "stradivarius_essentia_core",
+                    "enabled": true
+                }
+            ]
+        }
+    ]
+}
